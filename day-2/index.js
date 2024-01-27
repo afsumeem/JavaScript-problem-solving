@@ -77,10 +77,10 @@ console.log(sortedCars);
 // Write a function that searches an array of objects for a specific person by name. If found, modify their age property. Print the updated array.
 
 const people2 = [
-  { name: "Alice", age: 25 },
-  { name: "Bob", age: 30 },
-  { name: "Charlie", age: 22 },
-  { name: "Diana", age: 28 },
+  { name: "Afsana", age: 25 },
+  { name: "Meem", age: 30 },
+  { name: "Eve", age: 22 },
+  { name: "John", age: 28 },
 ];
 const modifyAgeByName = (people, targetName, newAge) => {
   for (let i = 0; i < people.length; i++) {
@@ -92,5 +92,5 @@ const modifyAgeByName = (people, targetName, newAge) => {
   console.log(`Person with name '${targetName}' not found.`);
 };
 
-modifyAgeByName(people2, "Charlie", 23);
+modifyAgeByName(people2, "Eve", 23);
 console.log(people2);

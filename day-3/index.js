@@ -3,11 +3,11 @@
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 const sumOfEvenNumbers = (arr) => {
-  return arr.reduce((accumulator, currentValue) => {
-    if (currentValue % 2 === 0) {
-      return accumulator + currentValue;
+  return arr.reduce((num, value) => {
+    if (value % 2 === 0) {
+      return num + value;
     }
-    return accumulator;
+    return num;
   }, 0);
 };
 
@@ -60,8 +60,8 @@ console.log(`Number of vowels in "${testString}": ${result3}`);
 // Task-4: Unique Values
 // Create an array of numbers with some duplicate values. Write a function to filter out the duplicate values and return a new array with only unique numbers. Print the result.
 
-const filterUniqueNumbers = (inputArray) => {
-  const uniqueNumbersSet = new Set(inputArray);
+const filterUniqueNumbers = (array) => {
+  const uniqueNumbersSet = new Set(array);
   const uniqueNumbersArray = [...uniqueNumbersSet];
   return uniqueNumbersArray;
 };
@@ -95,14 +95,14 @@ const calculateAverageGrade = (student) => {
   return sum / student.grades.length;
 };
 
-function sortStudentsByAverageGradeDescending(studentsArray) {
+const sortStudentsByAverageGradeDescending = (studentsArray) => {
   return studentsArray.sort((student1, student2) => {
     const averageGrade1 = calculateAverageGrade(student1);
     const averageGrade2 = calculateAverageGrade(student2);
 
     return averageGrade2 - averageGrade1;
   });
-}
+};
 const sortedStudents = sortStudentsByAverageGradeDescending(students);
 console.log(sortedStudents);
 

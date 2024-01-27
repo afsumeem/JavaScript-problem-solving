@@ -59,12 +59,12 @@ const memoizedExpensiveFunction = memoize(expensiveFunction);
 
 // Array of product objects
 let products = [
-  { name: "Laptop", price: 1200, category: "Electronics" },
+  { name: "headphone", price: 1200, category: "Electronics" },
   { name: "T-shirt", price: 25, category: "Clothing" },
-  { name: "Headphones", price: 100, category: "Electronics" },
-  { name: "Jeans", price: 50, category: "Clothing" },
-  { name: "Smartphone", price: 800, category: "Electronics" },
-  { name: "Sneakers", price: 80, category: "Clothing" },
+  { name: "laptop", price: 100, category: "Electronics" },
+  { name: "shirt", price: 50, category: "Clothing" },
+  { name: "phone", price: 800, category: "Electronics" },
+  { name: "jeans", price: 80, category: "Clothing" },
 ];
 
 // Function to sort the array of products

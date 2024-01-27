@@ -95,10 +95,10 @@ const suggestAdditionalPurchase = (money) => {
 const friendMoney = 15000;
 
 const mainPurchase = suggestPurchase(friendMoney);
-console.log("Your friend will buy: " + mainPurchase);
+console.log("My friend will buy: " + mainPurchase);
 
 // Suggesting additional purchase if applicable
 if (mainPurchase === "Gucci Bag") {
   const additionalPurchase = suggestAdditionalPurchase(friendMoney);
-  console.log("Additionally, your friend will buy: " + additionalPurchase);
+  console.log("Additionally, My friend will buy: " + additionalPurchase);
 }
