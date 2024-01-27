@@ -7,14 +7,13 @@ const people = [
   { name: "Meem", age: 28, gender: "female" },
 ];
 
-function filterFemale(person) {
+const filterFemale = (person) => {
   return person.gender === "female";
-}
+};
 
 const females = people.filter(filterFemale);
 const names = females.map((person) => person.name);
 
-// Print the final result
 console.log(names);
 
 // Task-2: Object Manipulation
@@ -27,38 +26,36 @@ const books = [
   { title: "Book-4", author: "Author-4", year: 1951 },
 ];
 
-function extractBookTitles(book) {
+const extractBookTitles = (book) => {
   return book.title;
-}
+};
 
 const bookTitles = books.map(extractBookTitles);
-
-// Print the result
 console.log(bookTitles);
 
 // Task-3: Function Composition
 // Write three functions: one to square a number, one to double a number, and one to add 5 to a number. Compose these functions to create a new function that squares a number, doubles the result, and then adds 5.
 
-function square(x) {
+const square = (x) => {
   return x * x;
-}
+};
 
-function double(x) {
+const double = (x) => {
   return x * 2;
-}
+};
 
-function add5(x) {
+const add5 = (x) => {
   return x + 5;
-}
+};
 
-function squareDoubleAndAdd5(x) {
+const squareDoubleAndAdd5 = (x) => {
   return add5(double(square(x)));
-}
+};
 
 const inputNumber = 3;
 const result = squareDoubleAndAdd5(inputNumber);
 
-console.log(result); // Output: 41
+console.log(result);
 
 // Task-4: Sorting Objects
 // Create an array of objects representing cars with properties like make, model, and year. Write a function to sort the array of cars by the year of manufacture in ascending order. Print the sorted array.
@@ -69,12 +66,11 @@ const cars = [
   { make: "Ford", model: "Fusion", year: 2019 },
   { make: "Chevrolet", model: "Malibu", year: 2017 },
 ];
-function sortByYearAscending(car1, car2) {
+const sortByYearAscending = (car1, car2) => {
   return car1.year - car2.year;
-}
+};
 
 const sortedCars = cars.sort(sortByYearAscending);
-// Print the sorted array
 console.log(sortedCars);
 
 // Task-5: Find and Modify
@@ -86,17 +82,15 @@ const people2 = [
   { name: "Charlie", age: 22 },
   { name: "Diana", age: 28 },
 ];
-function modifyAgeByName(peopleArray, targetName, newAge) {
-  for (let i = 0; i < peopleArray.length; i++) {
-    if (peopleArray[i].name === targetName) {
-      peopleArray[i].age = newAge;
+const modifyAgeByName = (people, targetName, newAge) => {
+  for (let i = 0; i < people.length; i++) {
+    if (people[i].name === targetName) {
+      people[i].age = newAge;
       return;
     }
   }
   console.log(`Person with name '${targetName}' not found.`);
-}
+};
 
 modifyAgeByName(people2, "Charlie", 23);
-
-// Print the updated array
 console.log(people2);
