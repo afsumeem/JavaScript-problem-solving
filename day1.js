@@ -73,3 +73,32 @@ if (number4 > 0) {
 //Task-5
 // ধরো তোমার এক বন্ধু তোমাকে বলেছে সে একটি Gucci Bag কিনবে যদি তার কাছে ১০ হাজার টাকা বা এর বেশি থাকে। নাহলে যদি তার কাছে ৫ হাজার বা এর বেশি টাকা থাকে তাহলে সে Levis Bag কিনবে। আর নাহলে সে নিউ মার্কেট থেকে কিছু (Something) কিনে নিবে। সে তোমাকে আরও বললো যে, যদি সে Gucci Bag কিনতে পারে এবং তার কাছে যদি ২০ হাজার টাকা এর বেশি থাকে তাহলে সে আরও একটি Gucci Belt কিনবে।
 // এখন ধরো তুমি জানো তোমার বন্ধুর কাছে কত টাকা আছে, তুমি কি বলতে পারবে সে কোন কোন জিনিস গুলো কিনবে?
+
+const suggestPurchase = (money) => {
+  if (money >= 10000) {
+    return "Gucci Bag";
+  } else if (money >= 5000) {
+    return "Levis Bag";
+  } else {
+    return "Something from the new market";
+  }
+};
+
+const suggestAdditionalPurchase = (money) => {
+  if (money >= 20000) {
+    return "Gucci Belt";
+  } else {
+    return "No additional purchase";
+  }
+};
+
+const friendMoney = 15000;
+
+const mainPurchase = suggestPurchase(friendMoney);
+console.log("Your friend will buy: " + mainPurchase);
+
+// Suggesting additional purchase if applicable
+if (mainPurchase === "Gucci Bag") {
+  const additionalPurchase = suggestAdditionalPurchase(friendMoney);
+  console.log("Additionally, your friend will buy: " + additionalPurchase);
+}
